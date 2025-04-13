@@ -15,6 +15,8 @@ server.get('/:id/:project', async (req, res) => {
     }
   });
 
+  res.set('Content-Type', 'image/svg+xml');
+
   try {
     await fetch(`https://img.shields.io/badge/${req.query.label ?? 'hackatime'}-${project_time}-${req.query.color ?? 'blue'}`)
       .then(async request => await request.text().then(response => res.send(response)));
