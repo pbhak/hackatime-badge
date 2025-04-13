@@ -1,5 +1,5 @@
 # hackatime-badge
-An API that converts a Hack Club Slack ID and Hackatime project name to a format for Shields.io badges!
+An API for Hackatime status badges!
 
 # Usage
 URL to fetch: `https://badge.pbhak.hackclub.app/slack_user_id/project_name`
