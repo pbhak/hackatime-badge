@@ -1,0 +1,23 @@
+{
+  "name": "hackatime-badge",
+  "version": "1.0.0",
+  "description": "An API that converts a Hack Club Slack ID and Hackatime project name to a format for Shields.io badges!",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pbhak/hackatime-badge.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pbhak/hackatime-badge/issues"
+  },
+  "homepage": "https://github.com/pbhak/hackatime-badge#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "type": "module"
+}
