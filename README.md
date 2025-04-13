@@ -1,14 +1,13 @@
 # hackatime-badge
 An API that converts a Hack Club Slack ID and Hackatime project name to a format for Shields.io badges!
 
-# Running locally
-1. Install needed dependencies (`npm i`)
-2. Edit PORT variable in server.js as needed and run server.js
-
 # Usage
 URL to fetch: `https://badge.pbhak.hackclub.app/slack_user_id/project_name`
 
-If adding to a Markdown file, just use standard image syntax: `![Hackatime Badge](https://badge.pbhak.hackclub.app/slack_user_id/project_name)`
+If adding to a Markdown file, just use standard image syntax: 
+```
+![Hackatime Badge](https://badge.pbhak.hackclub.app/slack_user_id/project_name)
+```
 
 ## Optional parameters
 ### `label`
@@ -24,3 +23,7 @@ Changes the color of the right side text. Defaults to blue if not given - if an 
 https://badge.pbhak.hackclub.app/U07V1ND4H0Q/hackatime-badge?color=red
 ```
 ![Hackatime Badge](https://badge.pbhak.hackclub.app/U07V1ND4H0Q/hackatime-badge?color=red)
+
+# Running locally
+1. Install needed dependencies (`npm i`)
+2. Edit PORT variable in server.js as needed and run server.js
