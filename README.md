@@ -19,6 +19,8 @@ https://badge.pbhak.hackclub.app/U07V1ND4H0Q/hackatime-badge?label=time
 
 ### `color`
 Changes the color of the right side text. Defaults to blue if not given - if an invalid value is given, defaults to green.
+
+Supports hex, RGB, RGBA, HSL, HSLA and CSS named colors
 ```
 https://badge.pbhak.hackclub.app/U07V1ND4H0Q/hackatime-badge?color=red
 ```
