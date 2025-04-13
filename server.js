@@ -9,9 +9,10 @@ function badge_data(time) {
 
 server.get('/:id/:project', async (req, res) => {
   const stats_url = `https://hackatime.hackclub.com/api/v1/users/${req.params.id}/stats?features=projects`;
-  const user_info = await fetch(stats_url);
-  const project_time = (await user_info.json()).data.projects
-    .filter((project_info) => project_info.name == req.params.project)[0].text
+  const project_time = await fetch(stats_url).then(async response => {
+    return (await response.json()).data.projects
+      .filter((project_info) => project_info.name == req.params.project)[0].text
+  })
 
   res.send(badge_data(project_time));
 });
