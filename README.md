@@ -2,13 +2,13 @@
 An API for Hackatime status badges!
 
 # Usage
-URL to fetch: `https://badge.pbhak.hackclub.app/slack_user_id/project_name`
+URL to fetch: `https://hackatime-badge.hackclub.com/slack_user_id/project_name`
 
 (the project name is case sensitive and must be as listed on hackatime)
 
 If adding to a Markdown file, just use standard image syntax: 
 ```
-![Hackatime Badge](https://badge.pbhak.hackclub.app/slack_user_id/project_name)
+![Hackatime Badge](https://hackatime-badge.hackclub.com/slack_user_id/project_name)
 ```
 
 ## Optional parameters
@@ -17,9 +17,9 @@ Changes the badge label text (the text on the left). Defaults to `hackatime`.
 
 example:
 ```
-https://badge.pbhak.hackclub.app/U07V1ND4H0Q/hackatime-badge?label=hackatime-badge
+https://hackatime-badge.hackclub.com/U07V1ND4H0Q/hackatime-badge?label=hackatime-badge
 ```
-![Hackatime Badge](https://badge.pbhak.hackclub.app/U07V1ND4H0Q/hackatime-badge?label=hackatime-badge)
+![Hackatime Badge](https://hackatime-badge.hackclub.com/U07V1ND4H0Q/hackatime-badge?label=hackatime-badge)
 
 ### `color`
 Changes the color of the right side text. Defaults to blue if not given - if an invalid value is given, defaults to green.
@@ -28,9 +28,9 @@ Supports hex, RGB, RGBA, HSL, HSLA and CSS named colors
 
 example:
 ```
-https://badge.pbhak.hackclub.app/U07V1ND4H0Q/hackatime-badge?color=darkgreen
+https://hackatime-badge.hackclub.com/U07V1ND4H0Q/hackatime-badge?color=darkgreen
 ```
-![Hackatime Badge](https://badge.pbhak.hackclub.app/U07V1ND4H0Q/hackatime-badge?color=darkgreen)
+![Hackatime Badge](https://hackatime-badge.hackclub.com/U07V1ND4H0Q/hackatime-badge?color=darkgreen)
 
 # Running locally
 1. Install needed dependencies (`npm i`)
