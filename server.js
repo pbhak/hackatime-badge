@@ -1,15 +1,18 @@
-import express, { response } from 'express';
+import express from 'express';
 
 const PORT = 41597;
 const server = express();
 
 server.get('/:id/:project', async (req, res) => {
   const stats_url = `https://hackatime.hackclub.com/api/v1/users/${req.params.id}/stats?features=projects`;
-  const project_time = await fetch(stats_url).then(async response => {
+  const project_index = await fetch(stats_url).then(async response => {
     try {
-      return (await response.json()).data.projects
-        .filter((project_info) => project_info.name == req.params.project)[0].text
-    } catch {
+      const projects = (await response.json()).data.projects
+      return projects.indexOf(
+        projects.filter(project => project.name == req.params.project)[0]
+      )
+    } catch (error) {
+      console.log(error)
       res.status(400);
       res.send('Error processing request - is your information correct? (400)');
     }
@@ -17,8 +20,10 @@ server.get('/:id/:project', async (req, res) => {
 
   res.set('Content-Type', 'image/svg+xml');
 
+  const shields_url = `https://img.shields.io/badge/dynamic/json?url=${stats_url}&query=$.data.projects[${project_index}].text&label=${req.query.label ?? 'hackatime'}&color=${req.query.color ?? 'blue'}`
+
   try {
-    await fetch(`https://img.shields.io/badge/${req.query.label ?? 'hackatime'}-${project_time}-${req.query.color ?? 'blue'}`)
+    await fetch(shields_url)
       .then(async request => await request.text().then(response => res.send(response)));
   } catch {
     res.status(500);

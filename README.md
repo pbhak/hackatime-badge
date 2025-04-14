@@ -4,6 +4,8 @@ An API for Hackatime status badges!
 # Usage
 URL to fetch: `https://badge.pbhak.hackclub.app/slack_user_id/project_name`
 
+the project name is case sensitive and must be as listed on hackatime.
+
 If adding to a Markdown file, just use standard image syntax: 
 ```
 ![Hackatime Badge](https://badge.pbhak.hackclub.app/slack_user_id/project_name)
@@ -29,3 +31,6 @@ https://badge.pbhak.hackclub.app/U07V1ND4H0Q/hackatime-badge?color=red
 # Running locally
 1. Install needed dependencies (`npm i`)
 2. Edit PORT variable in server.js as needed and run server.js
+
+
+for any questions, bugs, or concerns, feel free to contact me at @pbhak on the Slack!
