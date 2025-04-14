@@ -14,19 +14,23 @@ If adding to a Markdown file, just use standard image syntax:
 ## Optional parameters
 ### `label`
 Changes the badge label text (the text on the left). Defaults to `hackatime`.
+
+example:
 ```
-https://badge.pbhak.hackclub.app/U07V1ND4H0Q/hackatime-badge?label=time
+https://badge.pbhak.hackclub.app/U07V1ND4H0Q/hackatime-badge?label=hackatime-badge
 ```
-![Hackatime Badge](https://badge.pbhak.hackclub.app/U07V1ND4H0Q/hackatime-badge?label=time)
+![Hackatime Badge](https://badge.pbhak.hackclub.app/U07V1ND4H0Q/hackatime-badge?label=hackatime-badge)
 
 ### `color`
 Changes the color of the right side text. Defaults to blue if not given - if an invalid value is given, defaults to green.
 
 Supports hex, RGB, RGBA, HSL, HSLA and CSS named colors
+
+example:
 ```
-https://badge.pbhak.hackclub.app/U07V1ND4H0Q/hackatime-badge?color=red
+https://badge.pbhak.hackclub.app/U07V1ND4H0Q/hackatime-badge?color=darkgreen
 ```
-![Hackatime Badge](https://badge.pbhak.hackclub.app/U07V1ND4H0Q/hackatime-badge?color=red)
+![Hackatime Badge](https://badge.pbhak.hackclub.app/U07V1ND4H0Q/hackatime-badge?color=darkgreen)
 
 # Running locally
 1. Install needed dependencies (`npm i`)
