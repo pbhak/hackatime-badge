@@ -4,7 +4,7 @@ An API for Hackatime status badges!
 # Usage
 URL to fetch: `https://badge.pbhak.hackclub.app/slack_user_id/project_name`
 
-the project name is case sensitive and must be as listed on hackatime.
+(the project name is case sensitive and must be as listed on hackatime)
 
 If adding to a Markdown file, just use standard image syntax: 
 ```
