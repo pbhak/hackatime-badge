@@ -1,6 +1,6 @@
 import express from 'express';
 
-const PORT = 41597;
+const PORT = process.env.port || 3000;
 const server = express();
 
 server.get('/:id/:project', async (req, res) => {
