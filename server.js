@@ -3,6 +3,8 @@ import express from 'express';
 const PORT = process.env.port || 3000;
 const server = express();
 
+server.get('/', res => res.send("hi! you've reached the root endpoint on my badges api. did you make a wrong request?"));
+
 server.get('/:id/:project', async (req, res) => {
   const stats_url = `https://hackatime.hackclub.com/api/v1/users/${req.params.id}/stats?features=projects`;
   const label = req.query.label ?? 'hackatime';
