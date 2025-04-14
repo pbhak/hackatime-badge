@@ -16,6 +16,7 @@ server.get('/:id/:project', async (req, res) => {
   });
 
   res.set('Content-Type', 'image/svg+xml');
+  res.set('Cache-Control', 'no-cache')
 
   const shields_url = `https://img.shields.io/badge/dynamic/json?url=${stats_url}&query=$.data.projects[${project_index}].text&label=${req.query.label ?? 'hackatime'}&color=${req.query.color ?? 'blue'}`;
 
