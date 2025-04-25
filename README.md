@@ -1,9 +1,6 @@
 # hackatime-badge
 An API for Hackatime status badges!
 
-![Requests within last 24hrs](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fhackatime-badge.hackclub.com%2Fanalytics&query=%24.requestsInLast24Hours&label=requests%20within%20last%2024%20hours&color=darkgreen)
-![Requests within last week](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fhackatime-badge.hackclub.com%2Fanalytics&query=%24.requestsInLast7Days&label=requests%20within%20last%20week&color=purple)
-
 # Usage
 URL to fetch: `https://hackatime-badge.hackclub.com/slack_user_id/project_name`
 
