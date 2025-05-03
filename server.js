@@ -48,9 +48,9 @@ server.get("/:id/:project", async (req, res) => {
   res.set("Content-Type", "image/svg+xml");
   res.set("Cache-Control", "no-cache");
 
-  const shields_url = `https://img.shields.io/badge/${label}-${secondsToHours(
+  const shields_url = `https://img.shields.io/badge/hackatime-${secondsToHours(
     projectTime
-  )}-${color}`;
+  )}-${color}?label=${label}`;
 
   try {
     await fetch(shields_url).then(
