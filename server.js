@@ -39,10 +39,12 @@ server.get("/:id/:project", async (req, res) => {
 
   if (projectTime === 0) res.sendStatus(400);
 
-  for (const alias of aliases) {
-    await getSecondsForProject(req.params.id, alias).then(
-      (seconds) => (projectTime += seconds)
-    );
+  for (const alias of [...new Set(aliases)]) {
+    if (alias !== req.params.project) {
+      await getSecondsForProject(req.params.id, alias).then(
+        (seconds) => (projectTime += seconds)
+      );
+    }
   }
 
   res.set("Content-Type", "image/svg+xml");
