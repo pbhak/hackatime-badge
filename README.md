@@ -13,7 +13,7 @@ If adding to a Markdown file, just use standard image syntax:
 
 ## Optional parameters
 ### `label`
-Changes the badge label text (the text on the left). Defaults to `hackatime`. Must be URL encoded for spaces/special characters.
+Changes the badge label text (the text on the left). Defaults to `hackatime`.
 
 example:
 ```
@@ -42,29 +42,6 @@ example:
 ```
 https://hackatime-badge.hackclub.com/U07V1ND4H0Q/hackatime-badge?aliases=foo,bar
 ```
-
-### other parameters
-Any parameters not recognized will be passed to Shields.io, so you can use any [Shields-supported style parameters](https://shields.io/badges)
-
-* `style` - default `flat`
-    * available values: `flat`, `flat-square`, `plastic`, `for-the-badge`, `social`
-* `logo`
-    * An icon slug from [Simple Icons](https://simpleicons.org/) to be displayed before the left side label
-    * Slugs can be copied by clicking the icon title or they can be found in the [slugs.md](https://github.com/simple-icons/simple-icons/blob/master/slugs.md) file in the simple-icons repo
-    * See [this page](https://shields.io/docs/logos) for information on using custom icons 
-* `logoColor`
-    * Color of the logo (hex, RGB, RGBA, HSL, HSLA, or CSS named color)
-    * Only works with Simple Icons logos
-* `logoSize`
-    * Can set logos to resize adaptively by changing this to `auto`
-    * Only works with Simple Icons logos
-* `labelColor`
-    * Background color of the label (left part)
-* `link`
-    * Specifies what clicking on the left or right hand side of a badge does
-    * This parameter only works if your badge is in an `<object>` tag
-        * you can also achieve the same result with a wrapped `<a>`!
-
 
 # Running locally
 1. Install needed dependencies (`npm i`)
