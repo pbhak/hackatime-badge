@@ -59,7 +59,7 @@ Any parameters not recognized will be passed to Shields.io, so you can use any [
     * Can set logos to resize adaptively by changing this to `auto`
     * Only works with Simple Icons logos
 * `labelColor`
-    * Background color of the label (left part)
+    * Background color of the label (left part) - hex, RGB, RGBA, HSL, HSLA, or CSS named color
 * `link`
     * Specifies what clicking on the left or right hand side of a badge does
     * This parameter only works if your badge is in an `<object>` tag
