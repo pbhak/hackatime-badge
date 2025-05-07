@@ -10,6 +10,13 @@ function secondsToHours(seconds) {
   return (hours ? hours + "h " : "") + minutes + "m";
 }
 
+function removeKeysFromObject(object, keys) {
+  let newObject = structuredClone(object)
+  keys.forEach(key => delete newObject[key])
+
+  return newObject;
+}
+
 async function getSecondsForProject(userId, projectName) {
   const stats_url = `https://hackatime.hackclub.com/api/summary?user=${userId}`;
 
@@ -32,6 +39,8 @@ server.get("/:id/:project", async (req, res) => {
   const color = req.query.color ?? "blue";
   const aliases = req.query.aliases ? req.query.aliases.split(",") : [];
 
+  const miscParams = removeKeysFromObject(req.query, ['label', 'color', 'aliases']);
+
   let projectTime = await getSecondsForProject(
     req.params.id,
     req.params.project
@@ -50,9 +59,16 @@ server.get("/:id/:project", async (req, res) => {
   res.set("Content-Type", "image/svg+xml");
   res.set("Cache-Control", "no-cache");
 
-  const shields_url = `https://img.shields.io/badge/hackatime-${secondsToHours(
+  let shields_url = `https://img.shields.io/badge/hackatime-${secondsToHours(
     projectTime
   )}-${color}?label=${label}`;
+
+  if (Object.keys(miscParams).length !== 0) {
+    for (const paramName in miscParams) {
+      const paramValue = miscParams[paramName];
+      shields_url += `&${paramName}=${paramValue}`
+    }
+  }
 
   try {
     await fetch(shields_url).then(
