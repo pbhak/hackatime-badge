@@ -44,7 +44,7 @@ https://hackatime-badge.hackclub.com/U07V1ND4H0Q/hackatime-badge?aliases=foo,bar
 ```
 
 ### other parameters
-Any parameters not recognized will be passed to Shields.io, so you can use any [Shields-supported style parameters](https://shields.io/badges)
+Any parameters not recognized will be passed to Shields.io, so you can use any [Shields-supported style parameters](https://shields.io/badges):
 
 * `style` - default `flat`
     * available values: `flat`, `flat-square`, `plastic`, `for-the-badge`, `social`
