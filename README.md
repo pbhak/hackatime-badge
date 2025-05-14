@@ -1,4 +1,7 @@
 # hackatime-badge
+
+![Uptime Badge](https://img.shields.io/uptimerobot/status/m800538024-884a2991404da343e76934d6?color=blue)
+
 An API for Hackatime status badges!
 
 # Usage
