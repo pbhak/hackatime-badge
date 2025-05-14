@@ -1,8 +1,7 @@
 # hackatime-badge
+An API for Hackatime status badges!
 
 ![Uptime Badge](https://img.shields.io/uptimerobot/status/m800538024-884a2991404da343e76934d6?color=blue)
-
-An API for Hackatime status badges!
 
 # Usage
 URL to fetch: `https://hackatime-badge.hackclub.com/slack_user_id/project_name`
